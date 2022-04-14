@@ -1,0 +1,463 @@
+@font-face {
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/old-standard-tt-v17-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/old-standard-tt-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/old-standard-tt-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/old-standard-tt-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/old-standard-tt-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/old-standard-tt-v17-latin-regular.svg#OldStandardTT') format('svg'); /* Legacy iOS */
+  }
+
+  /* CUSTOM PROPS */
+$white-text-color: #fff;
+$black-bg: #181511;
+$second-text-color: #ACA592;
+$brand-color: #FFAE2B;
+
+/* GLOBAL STYLES */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*:focus {
+    outline: var(--brand-green-color) 1px dashed;
+    outline-offset: 3px;
+}
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $black-bg;
+    font-family: "Old Standard TT", 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 23px;
+    color: $white-text-color;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* CONTAINER SYTLES */
+.container {
+    width: 100%;
+    max-width: 124rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HEADER SECTION STYLES */
+.site-header {
+    background-color: $black-bg;
+    .header-container{
+        display: flex;
+        align-items: center;
+        padding: 1.4rem 0;
+    
+    .site-logo{
+        font-size: 2.2rem;
+        font-weight: 400;
+        line-height: 2.8rem;
+        color: $brand-color;
+        text-decoration: none;
+        }
+    }
+}
+.nav{
+    display: flex;
+    align-items: center;
+
+    .nav-list{
+        margin-left: 1.4rem;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        .nav-list-item{
+            margin-left: 2.8rem;
+            
+            a{
+                font-size: 1.1rem;
+                font-weight: 400;
+                line-height: 2.4rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $second-text-color;
+            }
+        }
+    }
+    .nav-btn{
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+        color: $brand-color;
+        padding: 1.5rem 2.5rem;
+        border: 0.1rem solid $brand-color;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-right: auto;
+    } 
+}
+
+/* HERO SECTION STYLES*/
+.hero-section {
+    background-image: url(../img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .hero-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12rem 28.5rem 20rem;
+        .hero-text{
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+            letter-spacing: 0.2rem;
+            color: $brand-color;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .hero-title{
+            font-size: 5.3rem;
+            line-height: 8rem;
+            letter-spacing: 0.1rem;
+            text-align: center;
+            color: $white-text-color;
+            margin-bottom: 3.5rem;
+        }
+        .hero-btn{
+            font-size: 1.1rem;
+            line-height: 2.2rem;
+            text-align: center;
+            background-color: $brand-color;
+            color: #181511;
+            padding: 1.4rem 2.4rem;
+            text-decoration: none;
+        }
+    }
+}
+
+/* TEMPLATE SECRION STYLES */
+.template-section {
+    padding: 12rem 0;
+    background-color: $black-bg;
+    // .template-container{}
+    .template-wrapper{
+        text-align: center;
+        .template-text{
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+            letter-spacing: 0.2rem;
+            color: $second-text-color;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .template-title{
+            font-size: 6rem;
+            line-height: 7rem;
+            color: $brand-color;
+            margin-bottom: 6rem;
+        }
+    }
+
+    .template-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 2rem;
+        .template-grid-item{
+            border: 1px solid #4B4136;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4.1rem;
+            .template-grid-item-img {
+                width: 30.5rem;
+                height: 19rem;
+                object-fit: cover;
+            }
+            .template-grid-item-text{
+                display: block;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+/* IMAGE SECTION STYLES */
+.image-section{
+    background-image: url(../img/bottom-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 28.6rem 0;
+    margin-bottom: 1rem;
+}
+
+/* SEVICES SECTION STYLES */
+.services-section {
+    background-color: $black-bg;
+    // .services-container{}
+    .services-wrapper{
+        text-align: center;
+            .services-text{
+                font-size: 1.2rem;
+                line-height: 2.2rem;
+                letter-spacing: 0.2rem;
+                color: $second-text-color;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+            .services-inner{
+                font-size: 6rem;
+                line-height: 7rem;
+                color: $brand-color;
+                margin-bottom: 6rem;
+            }
+    }
+    .services-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin-bottom: 11rem;
+            .services-grid-list {
+                padding: 6.1rem 11.7rem 7.6rem 6rem;
+                border: 1px solid #4B4136;
+                text-align: left;
+                    .services-grid-img{
+                        width: 6rem;
+                        height: 6rem;
+                        margin-bottom: 2rem;
+                    }
+                    .services-grid-title{
+                        font-size: 2.4rem;
+                        line-height: 4rem;
+                        color: $brand-color;
+                        margin-bottom: 1rem;
+                    }
+                    .services-grid-text{
+                        font-size: 1.5rem;
+                        line-height: 2.6rem;
+                        color: $second-text-color;
+                        margin-bottom: 0.5rem;
+                    }
+                    .services-grid-text2{
+                        font-size: 1.1rem;
+                        line-height: 2.6rem;
+                        color: $second-text-color;
+                    }
+             }
+    }
+}
+
+/* INSTAGRAM SECTION STYLES */
+.instagram-section {
+    background-color: $black-bg;
+
+    .instagram-container{
+        margin-bottom: 12rem;
+    }
+    .instagram-grid{
+        border-top: 0.2rem solid #4B4136;
+        border-bottom: 0.2rem solid #4B4136;
+        padding-top: 2rem;
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0;
+            .item{
+                height: 24rem;
+            }
+            .instagram-item{
+                background-image: url(../img/instagram.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            
+            .instagram-item2{
+                background-image: url(../img/instagram2.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+
+            .instagram-item3{
+                margin-top: 2rem;
+                width: 32rem;
+                position: relative;
+                .instagram-item-img {
+                    width: 20rem;
+                    height: 20rem;
+                    margin-left: 6.2rem;
+                }
+                .instagram-item-title {
+                    position: absolute;
+                    top: 2rem;
+                    left: 4.7rem;
+                    font-size: 4rem;
+                    line-height: 5rem;
+                    text-align: center;
+                    color: $brand-color;
+                }
+                .instagram-item-btn {
+                    position: absolute;
+                    top: 11rem;
+                    left: 10.4rem;
+                    font-size: 1.1rem;
+                    line-height: 2.2rem;
+                    text-align: center;
+                    color: #181511;
+                    padding: 1.4rem 2.4rem;
+                    background-color: $brand-color;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
+
+            .instagram-item4{
+                background-image: url(../img/instagram3.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+
+            .instagram-item5{
+                background-image: url(../img/instagram4.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            .instagram-absolute{
+                width: 5rem;
+                height: 5rem;
+                position: absolute;
+                top: -3.4rem;
+                left: 9.7rem;
+            }
+    }
+}
+
+
+/* FOOTER STYLES */
+.footer {
+    background-color: $black-bg;
+    // .footer-container{}
+    .footer-wrapper{
+        width: 57rem;
+        text-align: center;
+        margin: auto;
+        .footer-wrapper-title{
+            font-size: 6rem;
+            line-height: 7rem;
+            color: $brand-color;
+            margin-bottom: 2rem;
+        }
+        .footer-wrapper-text{
+            font-size: 1.2rem;
+            line-height: 2.8rem;
+            color: $second-text-color;
+            margin-bottom: 8.2rem;
+        }
+    }
+
+    .footer-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3.2rem;
+        .footer-form-input{
+          width: 42rem;
+          height: 5.9rem; 
+          border: 1px solid #4B4136; 
+          background-color: transparent;
+        }
+        .footer-form-btn{
+            width: 42rem;
+            height: 5.9rem; 
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            background-color: $brand-color;   
+        }
+    }
+    .footer-bottom-text{
+        margin: auto;
+        width: 41rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        text-align: center;
+        color: $second-text-color;
+        margin-bottom: 2.4rem;
+        .footer-bottom-text-span{
+            color: $brand-color;
+        }
+    }
+
+    .footer-social-icons{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4.2rem;
+        .social-icon{
+            width: 4.8rem;
+            height: 4.8rem;
+            border: 1px solid #4B4136;
+            padding: 1.4rem;
+            margin-left: 0.8rem;
+        }
+    }
+
+    .footer-bottom{
+        border-top: 0.1rem solid #4B4136;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 2.1rem;
+        .footer-bottom-text2 {
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+            color: $second-text-color;
+            .footer-bottom-text2-span {
+                line-height: 3rem;
+                color: $brand-color
+            }
+        }
+        .footer-bottom-list{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin-right: -0.8rem;
+            .footer-bottom-list-item{
+                margin-right: 0.8em;
+                a{
+                    text-decoration: none;
+                    font-size: 1.1rem;
+                    line-height: 3rem;
+                    color: $brand-color;
+                }
+            }
+        }
+    }
+}
+
+
+// .footer-bottom {
+// }
+// .footer-bottom-list {
+// }
+// .footer-bottom-list-item {
+// }
